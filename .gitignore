@@ -1,5 +1,4 @@
 .env
-authproject/
 *.pyc
 *~
 __pycache__
