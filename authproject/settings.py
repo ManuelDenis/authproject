@@ -60,7 +60,7 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = "users.CustomUser"
 
 CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000'
+     'https://authproject-212a117eb76e.herokuapp.com'
 ]
 
 MIDDLEWARE = [
