@@ -62,7 +62,7 @@ AUTH_USER_MODEL = "users.CustomUser"
 CORS_ORIGIN_WHITELIST = [
      'https://authproject-212a117eb76e.herokuapp.com'
 ]
-
+CSRF_TRUSTED_ORIGINS = ['https://authproject-212a117eb76e.herokuapp.com']
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
