@@ -1,13 +1,8 @@
 from dj_rest_auth.registration.serializers import RegisterSerializer
-from rest_framework import serializers
-
 from users.forms import CustomPasswordResetForm
 from users.models import CustomUser
-
 from rest_framework import serializers
 from django.conf import settings
-from django.contrib.auth.forms import PasswordResetForm
-from allauth.account.forms import ResetPasswordForm as AllAuthPasswordResetForm
 
 
 class GoogleAuthSerializer(serializers.Serializer):
