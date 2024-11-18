@@ -40,7 +40,6 @@ class CustomPasswordResetSerializer(serializers.Serializer):
 
     @property
     def password_reset_form_class(self):
-        print('use custom')
         return CustomPasswordResetForm
 
     def get_email_options(self):

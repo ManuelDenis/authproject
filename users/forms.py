@@ -27,7 +27,6 @@ class CustomPasswordResetForm(DefaultPasswordResetForm):
             'password_reset_confirm',  # The route name for password reset confirmation
             args=[user_pk_to_url_str(user), temp_key],
         )
-        print('Use custom')
 
         # Customize the domain (use localhost:3000 in this example)
         custom_domain = "http://localhost:3000"
