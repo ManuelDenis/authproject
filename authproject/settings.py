@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'requests',
     'corsheaders',
 ]
+
 AUTH_USER_MODEL = "users.CustomUser"
 
 CORS_ORIGIN_WHITELIST = [
@@ -163,7 +164,10 @@ REST_FRAMEWORK = {
 REST_AUTH_REGISTER_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'path.to.CustomRegisterSerializer',  # Înlocuiește cu calea ta reală
 }
-
+REST_AUTH = {
+    'PASSWORD_RESET_SERIALIZER':
+        'users.serializers.CustomPasswordResetSerializer',
+}
 SITE_ID = 1
 REST_USE_JWT = True
 JWT_AUTH_COOKIE = 'my-app-auth'
@@ -178,7 +182,7 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'  # Autentificare pe email
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # Verificarea email-ului este obligatorie
 
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
-LOGIN_URL = 'http://localhost:8000/users/login'  # redirected to the LOGIN_URL after verification
+LOGIN_URL = 'https://authproject-212a117eb76e.herokuapp.com/users/login'  # redirected to the LOGIN_URL after verification
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp-relay.brevo.com'
