@@ -93,3 +93,6 @@ class CustomLoginView(LoginView):
 
         # Continuăm cu autentificarea normală dacă emailul nu este găsit
         return super().post(request, *args, **kwargs)
+
+
+

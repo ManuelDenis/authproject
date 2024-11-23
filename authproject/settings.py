@@ -29,7 +29,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+ACCOUNT_ADAPTER = "users.adapters.CustomAccountAdapter"
 # Application definition
 
 INSTALLED_APPS = [
@@ -99,7 +99,7 @@ WSGI_APPLICATION = 'authproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -117,7 +117,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -162,7 +162,7 @@ REST_FRAMEWORK = {
     ],
 }
 REST_AUTH_REGISTER_SERIALIZERS = {
-    'REGISTER_SERIALIZER': 'path.to.CustomRegisterSerializer',  # Înlocuiește cu calea ta reală
+    'REGISTER_SERIALIZER': 'users.serializers.CustomRegisterSerializer',  # Înlocuiește cu calea ta reală
 }
 REST_AUTH = {
     'PASSWORD_RESET_SERIALIZER':
